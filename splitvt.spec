@@ -26,9 +26,9 @@ linuksowa).
 %patch0 -p1
 
 %build
+# NOTE: it's not autoconf-generated script - don't use macro
 ./configure
 %{__make}
-
 
 %install
 rm -rf $RPM_BUILD_ROOT
