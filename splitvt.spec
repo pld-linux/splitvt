@@ -28,7 +28,6 @@ vt100 i z nim kompatybilne (takie jak xterm , decterm , konsola linuxowa)
 ./configure
 %{__make}
 
-gzip -9nf README CHANGES NOTES TODO ANNOUNCE
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -42,6 +41,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README CHANGES NOTES TODO ANNOUNCE
 %{_bindir}/splitvt
 %{_mandir}/man1/splitvt.1*
