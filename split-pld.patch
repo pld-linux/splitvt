@@ -1,0 +1,61 @@
+diff -ruN splitvt-1.6.5/config.c splitvt-1.6.5.orig/config.c
+--- splitvt-1.6.5/config.c	Sat Jan 13 23:01:09 2001
++++ splitvt-1.6.5.orig/config.c	Fri Apr 19 15:03:27 2002
+@@ -169,7 +169,7 @@
+ 		strcat(ldflags, " -lsun");
+ 
+ 	/* Tell the user what kind of configuration to do */
+-	if ( (access("/etc/utmp", (R_OK|W_OK)) == 0) && getuid() )
++    if ( (access("/var/run/utmp", (R_OK|W_OK)) == 0) && getuid() )
+ 		write_utmp=1;
+ 	else
+ 		write_utmp=0;
+@@ -180,14 +180,14 @@
+ 			VERBOSE_PRINT(
+ 	"This program doesn't need to be installed set-uid root.\n");
+ 			VERBOSE_PRINT(
+-	"\nThis program will put entries for its windows in /etc/utmp.\n");
++	"\nThis program will put entries for its windows in /var/run/utmp.\n");
+ 		} else {
+ 			VERBOSE_PRINT(
+ 	"If installed set-uid root, this program will put entries for its windows\nin /etc/utmp.\n");
+ 		}
+ 	} else if ( write_utmp ) {
+ 		VERBOSE_PRINT(
+-	"This program will put entries for its windows in /etc/utmp.\n");
++	"This program will put entries for its windows in /var/run/utmp.\n");
+ 		VERBOSE_PRINT(
+ 	"\nIf installed set-uid root, this program will change ownership of the\n");
+ 		VERBOSE_PRINT(
+@@ -196,17 +196,13 @@
+ 		VERBOSE_PRINT(
+ 	"If installed set-uid root, this program will put entries for its windows\n");
+ 		VERBOSE_PRINT(
+-	"in /etc/utmp, and will also change ownership of the ttys it acquires to the\n");
++	"in /var/run/utmp, and will also change ownership of the ttys it acquires to the\n");
+ 		VERBOSE_PRINT(
+ 	"user running this program.\n");
+ 	}
+ 	VERBOSE_PRINT("\n");
+ 
+-
+-	if ( exists("/bin", "csh") )
+-		strcat(cflags, " -DSHELL=\\\"/bin/csh\\\"");
+-	else
+-		strcat(cflags, " -DSHELL=\\\"/bin/sh\\\"");
++	strcat(cflags, " -DSHELL=\\\"/bin/sh\\\"");
+ 
+ 	fprintf(makefile, 
+ "# This Makefile has been generated from the Configure script.\n");
+diff -ruN splitvt-1.6.5/utmp.c splitvt-1.6.5.orig/utmp.c
+--- splitvt-1.6.5/utmp.c	Sat Jan 13 22:48:13 2001
++++ splitvt-1.6.5.orig/utmp.c	Fri Apr 19 15:04:32 2002
+@@ -12,7 +12,7 @@
+ #define UTMP_FILE  "/tmp/utmp"
+ #else
+ #ifndef UTMP_FILE
+-#define UTMP_FILE  "/etc/utmp"
++#define UTMP_FILE  "/var/run/utmp"
+ #endif /* UTMP_FILE */
+ #endif /* DEBUG_UTMP */
+ 
