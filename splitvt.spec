@@ -1,5 +1,5 @@
 Summary:	A program which splits your terminal into two resizable windows
-Summary(pl):    Program który dzieli konsole na dwa okna
+Summary(pl):	Program który dzieli konsole na dwa okna
 Name:		splitvt
 Version:	1.6.5
 Release:	1
