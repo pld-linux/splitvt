@@ -8,6 +8,7 @@ Group:		Applications/System
 Source0:	ftp://metalab.unc.edu/pub/Linux/utils/console/%{name}-%{version}.tar.gz
 # Source0-md5:	f93974daa4f39945b3d5b9cc39bb1b0f
 Patch0:		split-pld.patch
+URL:		http://www.devolution.com/~slouken/projects/splitvt/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
