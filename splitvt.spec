@@ -16,9 +16,10 @@ At the moment, only vt100 compatible terminals
 (such as xterm, decterm, linux console, etc) will run splitvt.
 
 %description -l pl
-Ten program dzieli ekran na dwa okna dzieki czemu mo¿esz uruchomiæ
-dwie rzeczy na jednej konsoli.W tym momencie program obs³uguje terminal
-vt100 i z nim kompatybilne (takie jak xterm , decterm , konsola linuxowa)
+Ten program dzieli ekran na dwa okna dziêki czemu mo¿esz uruchomiæ dwa
+programy na jednej konsoli. W tym momencie program obs³uguje terminal
+vt100 i z nim kompatybilne (takie jak xterm, decterm, konsola
+linuksowa).
 
 %prep
 %setup -q
