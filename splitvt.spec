@@ -1,5 +1,5 @@
 Summary:	A program which splits your terminal into two resizable windows
-Summary(pl):	Program który dzieli konsole na dwa okna
+Summary(pl.UTF-8):   Program ktÃ³ry dzieli konsole na dwa okna
 Name:		splitvt
 Version:	1.6.5
 Release:	3
@@ -17,9 +17,9 @@ running a shell, so you can do two things at once.
 At the moment, only vt100 compatible terminals
 (such as xterm, decterm, linux console, etc) will run splitvt.
 
-%description -l pl
-Ten program dzieli ekran na dwa okna dziêki czemu mo¿esz uruchomiæ dwa
-programy na jednej konsoli. W tym momencie program obs³uguje terminal
+%description -l pl.UTF-8
+Ten program dzieli ekran na dwa okna dziÄ™ki czemu moÅ¼esz uruchomiÄ‡ dwa
+programy na jednej konsoli. W tym momencie program obsÅ‚uguje terminal
 vt100 i z nim kompatybilne (takie jak xterm, decterm, konsola
 linuksowa).
 
