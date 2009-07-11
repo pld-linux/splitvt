@@ -5,7 +5,7 @@ Version:	1.6.6
 Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	ftp://metalab.unc.edu/pub/Linux/utils/console/%{name}-%{version}.tar.gz
+Source0:	http://www.devolution.com/~slouken/projects/splitvt/%{name}-%{version}.tar.gz
 # Source0-md5:	ca886884f53c529c149f8945568411ed
 Patch0:		split-pld.patch
 URL:		http://www.devolution.com/~slouken/projects/splitvt/
