@@ -2,7 +2,7 @@ Summary:	A program which splits your terminal into two resizable windows
 Summary(pl.UTF-8):	Program który dzieli konsole na dwa okna
 Name:		splitvt
 Version:	1.6.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://www.devolution.com/~slouken/projects/splitvt/%{name}-%{version}.tar.gz

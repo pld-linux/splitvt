@@ -1,9 +1,19 @@
 diff -ruN splitvt-1.6.5/config.c splitvt-1.6.5.orig/config.c
 --- splitvt-1.6.5/config.c	Sat Jan 13 23:01:09 2001
 +++ splitvt-1.6.5.orig/config.c	Fri Apr 19 15:03:27 2002
-@@ -169,7 +169,7 @@
- 		strcat(ldflags, " -lsun");
+@@ -161,17 +161,8 @@
+ 		VERBOSE_PRINT("\tI will use wait4() instead of waitpid().\n");
+ 	}
  
+-	if ( exists("/usr/lib", "libnet.a") )	/* Socket routines */
+-		strcat(ldflags, " -lnet");
+-	if ( exists("/usr/lib", "libnsl.a") )	/* AT&T socket library */
+-		strcat(ldflags, " -lnsl");
+-	if ( exists("/usr/lib", "libnsl_s.a") )	/* AT&T socket library */
+-		strcat(ldflags, " -lnsl_s");
+-	if ( exists("/usr/lib", "libsun.a") )	/* IRIX yp routines */
+-		strcat(ldflags, " -lsun");
+-
  	/* Tell the user what kind of configuration to do */
 -	if ( (access("/etc/utmp", (R_OK|W_OK)) == 0) && getuid() )
 +    if ( (access("/var/run/utmp", (R_OK|W_OK)) == 0) && getuid() )
